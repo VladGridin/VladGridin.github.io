@@ -15,15 +15,15 @@ let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 let btn7 = document.getElementById("btn7");
 
-btn1.addEventListener("click", function() {
-    if (tg.MainButton.isVisible) {
-        tg.MainButton.hide();
-    }
-    else {
-        tg.MainButton.setText("Вы выбрали товар 1!")
-        item = "1";
-        tg.MainButton.show();
-    }
+btn1.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 1!");
+		item = "1";
+		tg.MainButton.show();
+	}
 });
 
 btn2.addEventListener("click", function() {
@@ -81,8 +81,8 @@ btn6.addEventListener("click", function() {
     }
 });
 
-Telegram.WebApp.onEvent("mainButtonClicked", function() {
-    tg.sendData(item);
+Telegram.WebApp.onEvent("mainButtonClicked", function(){
+	tg.sendData(item);
 });
 
 let usercard = document.getElementById("usercard");
